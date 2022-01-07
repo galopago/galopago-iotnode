@@ -18,6 +18,7 @@
   "homepage": "https://github.com/galopago/galopago-iotnode#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "package-lock": "^1.0.5"
+    "package-lock": "^1.0.5",
+    "pg": "^8.7.1"
   }
 }
