@@ -18,7 +18,7 @@ express()
       const client = await pool.connect();
 
       // Get all data from the database
-      const result = await client.query('SELECT id, sensor, location, temperature, humidity, pressure, altitude, timestamp FROM readings');
+      const result = await client.query('SELECT id, sensor_id, temperature_ext, temperature_int, battery, timestamp FROM readings');
       const results = result.rows;
       
       // Make the web page using the data
