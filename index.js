@@ -68,7 +68,7 @@ express()
     }
   })
   .post('/dbpost', async (req, res) => {
-    // Receive incoming requests from the ESP32 iot-node and insert the data into a PostgreSQL database
+    // Receive incoming requests from the ESP32 iot-node+ and insert the data into a PostgreSQL database
     try {
       const client = await pool.connect();
 
