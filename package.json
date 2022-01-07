@@ -1,0 +1,22 @@
+{
+  "name": "galopago-iotnode",
+  "version": "1.0.0",
+  "description": "galopago-iotnode package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galopago/galopago-iotnode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galopago/galopago-iotnode/issues"
+  },
+  "homepage": "https://github.com/galopago/galopago-iotnode#readme",
+  "dependencies": {
+    "package-lock": "^1.0.5"
+  }
+}
