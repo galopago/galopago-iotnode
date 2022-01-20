@@ -77,7 +77,7 @@ express()
       var temperature_int = req.body.temperature_int;
       var battery = req.body.battery;
       
-      var timestamp = await client.query("SELECT (CURRENT_TIMESTAMP(0) AT TIME ZONE 'CXT')::text;");
+      var timestamp = await client.query("SELECT (CURRENT_TIMESTAMP(0) AT TIME ZONE 'ACT')::text;");
       var ts = timestamp.rows[0].timezone;
 
       client.query(`INSERT INTO readings (sensor_id,temperature_ext,temperature_int,battery,timestamp) VALUES ('${sensor_id}', '${temperature_ext}', '${temperature_int}', '${battery}', '${ts}');`
