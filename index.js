@@ -72,10 +72,14 @@ express()
     try {
       const client = await pool.connect();
 
-      var sensor_id = req.body.sensor_id;
-      var temperature_ext = req.body.temperature_ext;
-      var temperature_int = req.body.temperature_int;
-      var battery = req.body.battery;
+      //var sensor_id = req.body.sensor_id;
+      var sensor_id = req.body[0].sensor_id;
+      //var temperature_ext = req.body.temperature_ext;
+      var temperature_ext = req.body[0].temperature_ext;
+      //var temperature_int = req.body.temperature_int;
+      var temperature_int = req.body[0].temperature_int;
+	  //var battery = req.body.battery;
+      var battery = req.body[0].battery;
       
       var timestamp = await client.query("SELECT (CURRENT_TIMESTAMP(0) AT TIME ZONE 'ACT')::text;");
       var ts = timestamp.rows[0].timezone;
