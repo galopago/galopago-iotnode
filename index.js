@@ -81,7 +81,7 @@ express()
 	  	//var timestamp = await client.query("SELECT (CURRENT_TIMESTAMP(0) AT TIME ZONE 'ACT')::text;");
 	  	//var ts = timestamp.rows[0].timezone;
 	  	
-	  	client.query(`INSERT INTO readings (sensor_id,temperature_ext,battery,timestamp) VALUES ('${sensor_id}', '${temperature_ext}', '${temperature_int}', '${battery}', '${ts}');`
+	  	client.query(`INSERT INTO readings (sensor_id,temperature_ext,battery,timestamp) VALUES ('${sensor_id}', '${temperature_ext}', '${battery}', '${ts}');`
       , (err, res) => {
         	try {
           	if (err) throw err;
