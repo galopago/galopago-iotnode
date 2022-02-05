@@ -18,7 +18,7 @@ express()
       const client = await pool.connect();
 
       // Get all data from the database
-      const result = await client.query('SELECT id, sensor_id, temperature_ext, temperature_int, battery, timestamp FROM readings');
+      const result = await client.query('SELECT id, sensor_id, temperature_ext, battery, timestamp FROM readings');
       const results = result.rows;
       
       // Make the web page using the data
@@ -29,7 +29,6 @@ express()
           <td>${elm.id}</td>
           <td>${elm.sensor_id}</td>
           <td>${elm.temperature_ext}</td>
-          <td>${elm.temperature_int}</td>
           <td>${elm.battery}</td>
           <td>${elm.timestamp}</td>
         </tr>`
@@ -48,7 +47,6 @@ express()
               <th>ID</th>
               <th>Sensor_id</th>
               <th>Temperature_ext (°C)</th>
-              <th>Temperature_int (°C)</th>
               <th>Battery (V)</th>
               <th>Timestamp</th>
             </tr>
