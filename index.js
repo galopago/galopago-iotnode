@@ -77,6 +77,7 @@ express()
 	  	var temperature_ext = req.body[i].temperature_ext;	  	
 	  	var battery = req.body[i].battery;
 	  	var ts = req.body[i].timestamp;
+
 	  	
 	  	//var timestamp = await client.query("SELECT (CURRENT_TIMESTAMP(0) AT TIME ZONE 'ACT')::text;");
 	  	//var ts = timestamp.rows[0].timezone;
